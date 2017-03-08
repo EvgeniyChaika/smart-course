@@ -10,15 +10,14 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by evgeniy on 08.03.17.
  */
 
 @Service
-public class VouchersServiceImpl implements VouchersService{
+public class VouchersServiceImpl implements VouchersService {
 
     @Autowired
     private StateService stateService;
@@ -42,5 +41,21 @@ public class VouchersServiceImpl implements VouchersService{
                 }
             }
         }
+    }
+
+    @Override
+    public List<Map<String, Long>> getCountWaitingVouchers() {
+        List<Map<String, Long>> returnList = new ArrayList<>();
+        Map<String, Long> mapResult;
+        List<Object[]> listResults = voucherRepository.getCountWaitingVouchers();
+        for (Object[] results : listResults) {
+            mapResult = new HashMap<>();
+            Long amount = Math.round((Double) results[0]);
+            Long quantity = (Long) results[1];
+            mapResult.put("amount", amount);
+            mapResult.put("quantity", quantity);
+            returnList.add(mapResult);
+        }
+        return returnList;
     }
 }

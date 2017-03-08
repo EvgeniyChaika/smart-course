@@ -13,4 +13,6 @@ public interface VouchersService {
     void createNewVouchers(List<GeneratedVouchersWrapper> vouchers);
 
     List<Map<String, Long>> getCountWaitingVouchers();
+
+    String setNewVouchersForExport(Integer idNetwork, List<GeneratedVouchersWrapper> listGeneratedVouchers);
 }

@@ -14,4 +14,7 @@ public interface VoucherRepository extends JpaRepository<Voucher, Integer> {
 
     @Query("select v.amount,count (v.id) from Voucher as v join v.state as st where st.state='WAITING' group by v.amount")
     List<Object[]> getCountWaitingVouchers();
+
+    @Query("select count (v) from Voucher as v where v.amount=?1")
+    Integer getCountRowsByAmount(Double cost);
 }

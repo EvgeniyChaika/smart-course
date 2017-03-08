@@ -1,8 +1,13 @@
 package com.control.services.impl;
 
+import com.control.models.Network;
 import com.control.models.State;
+import com.control.models.Supply;
 import com.control.models.Voucher;
+import com.control.repositories.NetworkRepository;
+import com.control.repositories.SupplyRepository;
 import com.control.repositories.VoucherRepository;
+import com.control.repositories.custom.VoucherCustomRepository;
 import com.control.services.StateService;
 import com.control.services.VouchersService;
 import com.control.wrappers.GeneratedVouchersWrapper;
@@ -24,6 +29,15 @@ public class VouchersServiceImpl implements VouchersService {
 
     @Autowired
     private VoucherRepository voucherRepository;
+
+    @Autowired
+    private NetworkRepository networkRepository;
+
+    @Autowired
+    private SupplyRepository supplyRepository;
+
+    @Autowired
+    private VoucherCustomRepository customVoucherRepository;
 
     @Override
     @Transactional
@@ -57,5 +71,26 @@ public class VouchersServiceImpl implements VouchersService {
             returnList.add(mapResult);
         }
         return returnList;
+    }
+
+    @Override
+    @Transactional
+    public String setNewVouchersForExport(Integer idNetwork, List<GeneratedVouchersWrapper> listGeneratedVouchers) {
+        Network network = networkRepository.findOne(idNetwork);
+        Supply supply = new Supply();
+        supply.setDate(new Date());
+        supply.setNetwork(network);
+        Supply savedSupply = supplyRepository.save(supply);
+        for (GeneratedVouchersWrapper generatedVoucher : listGeneratedVouchers) {
+            Integer amount = generatedVoucher.getAmount();
+            Integer quantity = generatedVoucher.getQuantity();
+            Integer quantityDb = voucherRepository.getCountRowsByAmount(Double.valueOf(amount));
+            if (quantity <= quantityDb) {
+                List<Voucher> listVouchers = customVoucherRepository.getTopVouchersRows(amount, quantity);
+
+            }
+        }
+        throw new ArithmeticException();  // for debug
+//        return "ok";
     }
 }

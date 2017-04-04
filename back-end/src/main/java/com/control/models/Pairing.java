@@ -8,7 +8,7 @@ import java.util.Date;
  */
 
 @Entity
-@Table(name = "rPairings")
+@Table(name = "r_pairings")
 public class Pairing {
 
     @Id

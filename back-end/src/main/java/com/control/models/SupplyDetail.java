@@ -7,7 +7,7 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "rSuppliesDetails")
+@Table(name = "r_supplies_details")
 public class SupplyDetail {
 
     @Id

@@ -18,9 +18,12 @@ module.exports = function createWebpackConfig() {
     config.output = {
         path: output,
         filename: `[name]${isDev ? '' : '.[hash]'}.bundle.js`,
-        publicPath: isDev ?'/' : '/receipts/'
+        publicPath: isDev ? '/' : '/receipts/'
     };
     config.cache = true;
+    config.resolve = {
+        extensions: ['.js', '.jsx']
+    };
     if (isDev) {
         config.watch = true;
         config.watchOptions = {
@@ -64,6 +67,7 @@ module.exports = function createWebpackConfig() {
                         {
                             loader: 'sass-loader',
                             options: {
+                                sourceMap: true,
                                 minimize: isProd
                             }
                         }
@@ -122,15 +126,15 @@ module.exports = function createWebpackConfig() {
         ]
     }
     ;
-    if (isDev) {
-        config.module.rules.push({
-            test: /\.(js|jsx)$/,
-            enforce: "pre",
-            use: [
-                "eslint-loader"
-            ]
-        })
-    }
+    // if (isDev) {
+    //     config.module.rules.push({
+    //         test: /\.(js|jsx)$/,
+    //         enforce: "pre",
+    //         use: [
+    //             "eslint-loader"
+    //         ]
+    //     })
+    // }
     config.devtool = isDev ? 'source-map' : false;
     if (isDev) {
         config.devServer = {

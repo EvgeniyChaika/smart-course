@@ -24,8 +24,9 @@
     "redux-devtools-extension": "^1.0.0",
     "redux-form": "~6.5.0",
     "redux-saga": "^0.14.3",
-    "timer.js": "^1.0.4",
-    "superagent": "^3.4.1"
+    "reset-css": "^2.2.0",
+    "superagent": "^3.4.1",
+    "timer.js": "^1.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.21.0",

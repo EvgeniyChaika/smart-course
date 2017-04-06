@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import 'reset-css';
+import 'bootstrap-loader';
 
 import App from './components/App/App';
 

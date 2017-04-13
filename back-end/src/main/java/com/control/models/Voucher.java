@@ -8,7 +8,7 @@ import java.util.Date;
  */
 
 @Entity
-@Table(name = "rVoucher")
+@Table(name = "r_vouchers")
 public class Voucher {
 
     @Id

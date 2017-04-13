@@ -8,7 +8,7 @@ import java.util.Set;
  */
 
 @Entity
-@Table(name = "rNetworks")
+@Table(name = "r_networks")
 public class Network {
 
     @Id

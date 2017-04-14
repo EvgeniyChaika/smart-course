@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from "react-router";
 import "./loginForm.scss";
 
 export default class LoginForm extends Component {
@@ -55,7 +56,10 @@ export default class LoginForm extends Component {
                                         </label>
                                     </div>
                                     <div>
-                                        <input type="submit" className="btn btn-default" value="Submit"/>
+                                        <Link to="/main/home">
+                                            <input type="submit" className="btn btn-default"
+                                                   value="Submit"/>
+                                        </Link>
                                     </div>
                                 </form>
                             </div>

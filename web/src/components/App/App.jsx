@@ -1,16 +1,16 @@
-import React, {Component} from 'react';
-import './app.scss';
+import React, {Component} from "react";
+import "./app.scss";
 
-import HeaderMenu from '../HeaderMenu/HeaderMenu';
-import LoginForm from "../LoginForm/LoginForm";
+import HeaderMenu from "../HeaderMenu/HeaderMenu";
 
 export default class App extends Component {
 
     render() {
+        const {children} = this.props;
         return (
             <div>
-                {/*<HeaderMenu/>*/}
-                <LoginForm/>
+                <HeaderMenu/>
+                <div>{children}</div>
             </div>
         )
     }

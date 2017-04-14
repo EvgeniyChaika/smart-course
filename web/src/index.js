@@ -1,10 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'reset-css';
-import 'bootstrap-loader';
+import React from "react";
+import ReactDOM from "react-dom";
+import "reset-css";
+import "bootstrap-loader";
+import getRoute from "./routers";
 
-import App from './components/App/App';
+import "./images/favicon/favicon.ico";
+import {hashHistory, Router} from "react-router";
 
-import './images/favicon/favicon.ico';
+const routers = (
+    <Router history={hashHistory}>{getRoute()}</Router>
+);
 
-ReactDOM.render(<App/>,document.getElementById("root"));
+
+ReactDOM.render(routers, document.getElementById('root'));

@@ -1,4 +1,5 @@
 import React, {Component} from "react";
+import {Link} from "react-router";
 
 export default class MenuPart extends Component {
 
@@ -20,10 +21,11 @@ export default class MenuPart extends Component {
     }
 
     render() {
-        const {isActive, title} = this.props;
+        const {isActive, title, url} = this.props;
         return (
+
             <li className={isActive ? 'active' : ''} onClick={this.handleClick}>
-                <a href="#">{title}</a></li>
+                <Link to={url}>{title}</Link></li>
         )
     }
 }

@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>receipts-manager</artifactId>
-        <groupId>com.control</groupId>
+        <artifactId>smart-course</artifactId>
+        <groupId>com.course</groupId>
         <version>1.0</version>
     </parent>
 
@@ -15,12 +15,12 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.control</groupId>
+            <groupId>com.course</groupId>
             <artifactId>back-end</artifactId>
             <version>1.0</version>
         </dependency>
         <dependency>
-            <groupId>com.control</groupId>
+            <groupId>com.course</groupId>
             <artifactId>web</artifactId>
             <version>1.0</version>
         </dependency>
@@ -41,7 +41,7 @@
                     <failOnMissingWebXml>false</failOnMissingWebXml>
                     <archive>
                         <manifest>
-                            <mainClass>com.control.ReceiptsManagerApplication</mainClass>
+                            <mainClass>com.course.SmartCourseApplication</mainClass>
                             <addDefaultImplementationEntries>true</addDefaultImplementationEntries>
                         </manifest>
                     </archive>

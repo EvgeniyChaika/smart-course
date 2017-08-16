@@ -1,7 +1,6 @@
 package com.course;
 
-import com.course.models.Network;
-import com.course.repositories.NetworkRepository;
+import com.course.models.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -34,14 +33,14 @@ public class SmartCourseApplication extends SpringBootServletInitializer impleme
 
         NetworkRepository networkRepository = applicationContext.getBean(NetworkRepository.class);
 
-        List<Network> networksList = networkRepository.findAll();
+        List<User> networksList = networkRepository.findAll();
 
         if (networksList.isEmpty()) {
-            Network network1 = new Network();
+            User network1 = new User();
             network1.setNetwork("UkrTelecom");
             networksList.add(network1);
 
-            Network network2 = new Network();
+            User network2 = new User();
             network2.setNetwork("Triolan");
             networksList.add(network2);
 

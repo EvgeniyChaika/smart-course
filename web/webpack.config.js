@@ -18,7 +18,7 @@ module.exports = function createWebpackConfig() {
     config.output = {
         path: output,
         filename: `[name]${isDev ? '' : '.[hash]'}.bundle.js`,
-        publicPath: isDev ? '/' : '/receipts/'
+        publicPath: isDev ? '/' : '/course/'
     };
     config.cache = true;
     config.resolve = {

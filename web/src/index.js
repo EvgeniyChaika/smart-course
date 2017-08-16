@@ -5,6 +5,6 @@ import 'bootstrap-loader';
 
 import App from './components/App/App';
 
-import './images/favicon/favicon.ico';
+import '../public/favicon/favicon.ico';
 
-ReactDOM.render(<App/>,document.getElementById("root"));
+ReactDOM.render(<App/>,document.getElementById("app"));

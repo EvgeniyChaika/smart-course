@@ -2,7 +2,7 @@ import React, {Component} from "react";
 import "./headerMenu.scss";
 import "../MenuPart/MenuPart";
 import MenuPart from "../MenuPart/MenuPart";
-import menu from "../../content/menu";
+import menu from "../../constants/headerMenu";
 
 export default class HeaderMenu extends Component {
 

@@ -1,4 +1,4 @@
-const menu = [
+const headerMenu = [
     {
         index: 0,
         title: "Home"
@@ -25,4 +25,4 @@ const menu = [
     }
 ];
 
-export default menu;
+export default headerMenu;

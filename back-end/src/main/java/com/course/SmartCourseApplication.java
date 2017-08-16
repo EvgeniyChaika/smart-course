@@ -1,7 +1,7 @@
 package com.course;
 
-import com.course.models.User;
-import com.course.repositories.UserRepository;
+import com.course.models.Role;
+import com.course.repositories.RoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -32,16 +32,20 @@ public class SmartCourseApplication extends SpringBootServletInitializer impleme
 
     private void checkNetworksTable() {
 
-        UserRepository userRepository = applicationContext.getBean(UserRepository.class);
+        RoleRepository roleRepository = applicationContext.getBean(RoleRepository.class);
 
-        List<User> userList = userRepository.findAll();
+        List<Role> roleList = roleRepository.findAll();
 
-        if (userList.isEmpty()) {
-            User userAdmin = new User();
-            userAdmin.setUserName("Admin");
-            userList.add(userAdmin);
+        if (roleList.isEmpty()) {
+            Role roleAdmin = new Role();
+            roleAdmin.setDescription("admin");
+            roleList.add(roleAdmin);
 
-            userList = userRepository.save(userList);
+            Role roleUser = new Role();
+            roleUser.setDescription("user");
+            roleList.add(roleUser);
+
+            roleList = roleRepository.save(roleList);
         }
     }
 }

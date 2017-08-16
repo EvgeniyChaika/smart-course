@@ -7,15 +7,15 @@ import javax.persistence.*;
  */
 
 @Entity
-@Table(name = "sc_user")
-public class User {
+@Table(name = "role")
+public class Role {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(name = "user_name")
-    private String userName;
+    @Column(name = "description")
+    private String description;
 
     public Integer getId() {
         return id;
@@ -25,19 +25,19 @@ public class User {
         this.id = id;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getDescription() {
+        return description;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     @Override
     public String toString() {
-        return "User{" +
+        return "Role{" +
                 "id=" + id +
-                ", userName='" + userName + '\'' +
+                ", description='" + description + '\'' +
                 '}';
     }
 }

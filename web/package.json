@@ -2,7 +2,7 @@
   "name": "smart-course",
   "author": "Evgeniy Chaika",
   "description": "Smart Course",
-  "version": "1.0",
+  "version": "1.0.0",
   "license": "MIT",
   "scripts": {
     "server:dev": "cross-env NODE_ENV=development webpack-dev-server --host 0.0.0.0 --config webpack.config.js --inline --progress --colors --watch --hot --content-base ./",
@@ -21,6 +21,7 @@
     "react-router-redux": "^4.0.8",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
+    "reset-css": "^2.2.1",
     "toastr": "^2.1.2"
   },
   "devDependencies": {

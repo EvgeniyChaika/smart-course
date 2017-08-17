@@ -1,13 +1,15 @@
-import React, {Component} from "react";
+import React  from 'react';
+import PropTypes from 'prop-types';
+
 import "./headerMenu.scss";
 import "../MenuPart/MenuPart";
 import MenuPart from "../MenuPart/MenuPart";
 import menu from "../../constants/headerMenu";
 
-export default class HeaderMenu extends Component {
+export default class HeaderMenu extends React.Component {
 
     static propTypes = {
-        activeIndex: React.PropTypes.number
+        activeIndex: PropTypes.number
     };
 
     constructor(props) {

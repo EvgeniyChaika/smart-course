@@ -1,7 +1,7 @@
-import React, {Component} from "react";
+import React from "react";
 import "./loginForm.scss";
 
-export default class LoginForm extends Component {
+export default class LoginForm extends React.Component {
 
     constructor(props) {
         super(props);
@@ -63,6 +63,6 @@ export default class LoginForm extends Component {
                     </div>
                 </div>
             </section>
-        )
+        );
     }
 }

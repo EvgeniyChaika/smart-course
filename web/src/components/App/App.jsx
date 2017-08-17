@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './app.scss';
 
 import HeaderMenu from '../HeaderMenu/HeaderMenu';
 import LoginForm from "../LoginForm/LoginForm";
 
-export default class App extends Component {
+export default class App extends React.Component {
 
     render() {
         return (
@@ -12,6 +12,6 @@ export default class App extends Component {
                 <HeaderMenu/>
                 {/*<LoginForm/>*/}
             </div>
-        )
+        );
     }
 }

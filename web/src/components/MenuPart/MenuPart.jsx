@@ -1,12 +1,13 @@
-import React, {Component} from "react";
+import React from "react";
+import PropTypes from 'prop-types';
 
-export default class MenuPart extends Component {
+export default class MenuPart extends React.Component {
 
     static propTypes = {
-        index: React.PropTypes.number,
-        title: React.PropTypes.string,
-        isActive: React.PropTypes.bool,
-        onClick: React.PropTypes.func
+        index: PropTypes.number,
+        title: PropTypes.string,
+        isActive: PropTypes.bool,
+        onClick: PropTypes.func
     };
 
     constructor(props) {

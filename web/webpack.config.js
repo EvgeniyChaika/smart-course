@@ -1,4 +1,5 @@
 'use strict';
+/* eslint-disable no-console */
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -185,7 +186,7 @@ module.exports = function createWebpackConfig() {
             }),
             new webpack.optimize.OccurrenceOrderPlugin(),
             new webpack.optimize.AggressiveMergingPlugin(),
-            new webpack.NoErrorsPlugin())
+            new webpack.NoErrorsPlugin());
     }
     return config;
 }();

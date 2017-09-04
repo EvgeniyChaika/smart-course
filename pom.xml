@@ -9,10 +9,10 @@
         <version>1.5.2.RELEASE</version>
     </parent>
 
-    <groupId>com.control</groupId>
-    <artifactId>receipts-manager</artifactId>
+    <groupId>com.course</groupId>
+    <artifactId>smart-course</artifactId>
     <version>1.0</version>
-    <name>Receipts Manager</name>
+    <name>Smart Course</name>
     <packaging>pom</packaging>
 
     <modules>
@@ -35,6 +35,6 @@
                 </plugin>
             </plugins>
         </pluginManagement>
-        <finalName>receipts-manager-${project.version}</finalName>
+        <finalName>smart-course-${project.version}</finalName>
     </build>
 </project>

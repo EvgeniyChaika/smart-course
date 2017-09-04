@@ -1,14 +1,15 @@
-import React, {Component} from "react";
-import {Link} from 'react-router';
+import React  from 'react';
+import PropTypes from 'prop-types';
+
 import "./headerMenu.scss";
 import "../MenuPart/MenuPart";
 import MenuPart from "../MenuPart/MenuPart";
-import menu from "../../content/menu";
+import menu from "../../constants/headerMenu";
 
-export default class HeaderMenu extends Component {
+export default class HeaderMenu extends React.Component {
 
     static propTypes = {
-        activeIndex: React.PropTypes.number
+        activeIndex: PropTypes.number
     };
 
     constructor(props) {
@@ -31,21 +32,20 @@ export default class HeaderMenu extends Component {
             <nav className="navbar navbar-default">
                 <div className="collapse navbar-collapse">
                     <div className="navbar-header">
-                        <a className="navbar-brand">Receipts Manager</a>
+                        <a className="navbar-brand" href="#">Receipts Manager</a>
                     </div>
                     <ul className="nav navbar-nav">
                         {menu.map(content =>
-                                <MenuPart key={content.index}
-                                          index={content.index}
-                                          title={content.title}
-                                          url={content.url}
-                                          isActive={activeIndex === content.index}
-                                          onClick={this.click}
-                                />
+                            <MenuPart key={content.index}
+                                      index={content.index}
+                                      title={content.title}
+                                      isActive={activeIndex === content.index}
+                                      onClick={this.click}
+                            />
                         )}
                     </ul>
                     <ul className="nav navbar-nav pull-right">
-                        <li><Link to="/login" className="navbar-nav pull-right">Logout</Link></li>
+                        <li><a href="#contact" className="navbar-nav pull-right">Logout</a></li>
                     </ul>
                 </div>
             </nav>

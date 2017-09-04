@@ -1,8 +1,7 @@
-import React, {Component} from "react";
-import {Link} from "react-router";
+import React from "react";
 import "./loginForm.scss";
 
-export default class LoginForm extends Component {
+export default class LoginForm extends React.Component {
 
     constructor(props) {
         super(props);
@@ -56,10 +55,7 @@ export default class LoginForm extends Component {
                                         </label>
                                     </div>
                                     <div>
-                                        <Link to="/main/home">
-                                            <input type="submit" className="btn btn-default"
-                                                   value="Submit"/>
-                                        </Link>
+                                        <input type="submit" className="btn btn-default" value="Submit"/>
                                     </div>
                                 </form>
                             </div>
@@ -67,6 +63,6 @@ export default class LoginForm extends Component {
                     </div>
                 </div>
             </section>
-        )
+        );
     }
 }

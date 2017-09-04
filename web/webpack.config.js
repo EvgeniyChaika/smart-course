@@ -1,4 +1,5 @@
 'use strict';
+/* eslint-disable no-console */
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -9,7 +10,7 @@ const NODE_ENV = process.env.NODE_ENV;
 const isDev = NODE_ENV === 'development';
 const isProd = NODE_ENV === 'production';
 console.log("---------------" + NODE_ENV + "--------------");
-const output = path.join(__dirname, './target/static');
+const output = path.join(__dirname, isDev ? './dist' : './target/static');
 
 module.exports = function createWebpackConfig() {
     let config = {};
@@ -18,7 +19,7 @@ module.exports = function createWebpackConfig() {
     config.output = {
         path: output,
         filename: `[name]${isDev ? '' : '.[hash]'}.bundle.js`,
-        publicPath: isDev ? '/' : '/receipts/'
+        publicPath: isDev ? '/' : '/course/'
     };
     config.cache = true;
     config.resolve = {
@@ -123,7 +124,7 @@ module.exports = function createWebpackConfig() {
                 test: /\.html$/,
                 loader: "raw-loader"
             },
-            { test: /bootstrap-sass[/]assets[/]javascripts[/]/, loader: 'imports-loader?jQuery=jquery' }
+            {test: /bootstrap-sass[/]assets[/]javascripts[/]/, loader: 'imports-loader?jQuery=jquery'}
         ]
     }
     ;
@@ -167,8 +168,8 @@ module.exports = function createWebpackConfig() {
     config.plugins.push(
         new HtmlWebpackPlugin({
             inject: true,
-            favicon: 'src/images/favicon/favicon.ico',
-            template: __dirname + '/src/html/index.html'
+            favicon: 'public/favicon/favicon.ico',
+            template: __dirname + '/public/index.html'
         }),
         new webpack.DefinePlugin([{
             NODE_ENV: JSON.stringify("NODE_ENV")
@@ -185,7 +186,7 @@ module.exports = function createWebpackConfig() {
             }),
             new webpack.optimize.OccurrenceOrderPlugin(),
             new webpack.optimize.AggressiveMergingPlugin(),
-            new webpack.NoErrorsPlugin())
+            new webpack.NoErrorsPlugin());
     }
     return config;
 }();

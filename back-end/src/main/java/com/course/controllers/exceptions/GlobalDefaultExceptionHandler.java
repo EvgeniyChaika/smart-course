@@ -1,4 +1,4 @@
-package com.control.controllers.exceptions;
+package com.course.controllers.exceptions;
 
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.http.HttpStatus;

@@ -1,13 +1,13 @@
-import React, {Component} from "react";
-import {Link} from "react-router";
+import React from "react";
+import PropTypes from 'prop-types';
 
-export default class MenuPart extends Component {
+export default class MenuPart extends React.Component {
 
     static propTypes = {
-        index: React.PropTypes.number,
-        title: React.PropTypes.string,
-        isActive: React.PropTypes.bool,
-        onClick: React.PropTypes.func
+        index: PropTypes.number,
+        title: PropTypes.string,
+        isActive: PropTypes.bool,
+        onClick: PropTypes.func
     };
 
     constructor(props) {
@@ -21,11 +21,10 @@ export default class MenuPart extends Component {
     }
 
     render() {
-        const {isActive, title, url} = this.props;
+        const {isActive, title} = this.props;
         return (
-
             <li className={isActive ? 'active' : ''} onClick={this.handleClick}>
-                <Link to={url}>{title}</Link></li>
+                <a href="#">{title}</a></li>
         )
     }
 }

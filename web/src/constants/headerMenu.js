@@ -1,4 +1,4 @@
-const menu = [
+const headerMenu = [
     {
         index: 0,
         url: "/main/home",
@@ -31,4 +31,4 @@ const menu = [
     }
 ];
 
-export default menu;
+export default headerMenu;

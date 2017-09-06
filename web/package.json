@@ -16,7 +16,7 @@
     "start": "npm-run-all --parallel server:dev lint:watch test:watch"
   },
   "dependencies": {
-    "babel-polyfill": "^6.23.0",
+    "babel-polyfill": "^6.26.0",
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
     "prop-types": "^15.5.10",
@@ -24,6 +24,7 @@
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
     "react-router": "^4.1.2",
+    "react-router-dom": "^4.2.2",
     "react-router-redux": "^4.0.8",
     "redux": "^3.7.2",
     "redux-thunk": "^2.2.0",
@@ -72,7 +73,7 @@
     "moment": "^2.18.1",
     "nock": "8.0.0",
     "node-sass": "^4.5.3",
-    "npm-run-all": "1.8.0",
+    "npm-run-all": "^1.8.0",
     "open": "0.0.5",
     "postcss-loader": "^2.0.6",
     "raw-loader": "^0.5.1",

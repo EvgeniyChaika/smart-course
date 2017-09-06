@@ -35,7 +35,7 @@ export default class LoginForm extends React.Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-sm-4 col-sm-offset-4">
-                                <h2 className="text-center">Receipts Manager</h2>
+                                <h2 className="text-center">Smart Course</h2>
                                 <form role="form" onSubmit={this.handleSubmit} onChange={this.handleInputChange}>
                                     <div className="form-group">
                                         <label htmlFor="exampleInputEmail1">Login :</label>

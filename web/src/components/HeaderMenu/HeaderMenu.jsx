@@ -1,5 +1,5 @@
-import React  from 'react';
-import PropTypes from 'prop-types';
+import React from 'react';
+import {Link} from 'react-router-dom';
 
 import "./headerMenu.scss";
 import "../MenuPart/MenuPart";
@@ -7,10 +7,6 @@ import MenuPart from "../MenuPart/MenuPart";
 import menu from "../../constants/headerMenu";
 
 export default class HeaderMenu extends React.Component {
-
-    static propTypes = {
-        activeIndex: PropTypes.number
-    };
 
     constructor(props) {
         super(props);
@@ -32,7 +28,7 @@ export default class HeaderMenu extends React.Component {
             <nav className="navbar navbar-default">
                 <div className="collapse navbar-collapse">
                     <div className="navbar-header">
-                        <a className="navbar-brand" href="#">Receipts Manager</a>
+                        <a className="navbar-brand" href="#">Smart Course</a>
                     </div>
                     <ul className="nav navbar-nav">
                         {menu.map(content =>
@@ -45,10 +41,10 @@ export default class HeaderMenu extends React.Component {
                         )}
                     </ul>
                     <ul className="nav navbar-nav pull-right">
-                        <li><a href="#contact" className="navbar-nav pull-right">Logout</a></li>
+                        <Link to="/login" r className="navbar-nav pull-right"><li>Login</li></Link>
                     </ul>
                 </div>
             </nav>
-        )
+        );
     }
 }

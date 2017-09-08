@@ -6,25 +6,21 @@ export default class MenuPart extends React.Component {
     static propTypes = {
         index: PropTypes.number,
         title: PropTypes.string,
-        isActive: PropTypes.bool,
-        onClick: PropTypes.func
+        isActive: PropTypes.number,
+        onClickButton: PropTypes.func
     };
 
     constructor(props) {
         super(props);
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick() {
-        const {onClick, index} = this.props;
-        onClick(index);
     }
 
     render() {
-        const {isActive, title} = this.props;
+        const {isActive, title, index} = this.props;
+        console.log(isActive);
+        console.log(index);
         return (
-            <li className={isActive ? 'active' : ''} onClick={this.handleClick}>
+            <li className={isActive === index ? 'active' : ''} onClick={() => this.props.onClickButton(index)}>
                 <a href="#">{title}</a></li>
-        )
+        );
     }
 }

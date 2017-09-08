@@ -1,11 +1,23 @@
-import {createStore, applyMiddleware} from 'redux';
+import { createStore } from 'redux';
 
-import rootReducer from '../reducers';
+const initialState = {
+    activeIndex: 0
+};
 
-export default function configureStore(initialState) {
+export default function configureStore() {
     return createStore(
-        rootReducer,
+        headerReducer,
         initialState
     );
 }
 
+function headerReducer(state, action) {
+    console.log(state);
+    console.log(action);
+    switch (action.type) {
+        case 'ACTIVE_BUTTON':
+            return Object.assign(initialState, state, action.activeIndex);
+        default:
+            return state;
+    }
+}

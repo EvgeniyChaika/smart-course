@@ -16,8 +16,6 @@ export default class MenuPart extends React.Component {
 
     render() {
         const {isActive, title, index} = this.props;
-        console.log(isActive);
-        console.log(index);
         return (
             <li className={isActive === index ? 'active' : ''} onClick={() => this.props.onClickButton(index)}>
                 <a href="#">{title}</a></li>

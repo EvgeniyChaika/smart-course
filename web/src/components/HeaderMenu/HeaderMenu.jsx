@@ -1,9 +1,9 @@
 import React from 'react';
 
-import "./headerMenu.scss";
-import "../MenuPart/MenuPart";
-import MenuPart from "../MenuPart/MenuPart";
-import menu from "../../constants/headerMenu";
+import './headerMenu.scss';
+import '../MenuPart/MenuPart';
+import MenuPart from '../MenuPart/MenuPart';
+import menu from '../../constants/headerMenu';
 
 export default function HeaderMenu(props) {
     return (

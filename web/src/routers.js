@@ -1,7 +1,7 @@
-import React from "react";
-import { Route } from "react-router";
-import App from "./components/App/App";
-import Main from "./components/Main/Main";
+import React from 'react';
+import { Route } from 'react-router';
+import App from './components/App/App';
+import Main from './components/Main/Main';
 import LoginForm from './components/LoginForm/LoginForm';
 
 export default function getRoutes(store) {

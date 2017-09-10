@@ -1,5 +1,5 @@
-import React from "react";
-import "./loginForm.scss";
+import React from 'react';
+import './loginForm.scss';
 
 export default class LoginForm extends React.Component {
 

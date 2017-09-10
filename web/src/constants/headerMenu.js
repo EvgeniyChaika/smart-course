@@ -8,6 +8,11 @@ const headerMenu = [
         index: 1,
         url: "/main/users",
         title: "Users"
+    },
+    {
+        index: 2,
+        url: "/main/statistics",
+        title: "Statistics"
     }
 ];
 

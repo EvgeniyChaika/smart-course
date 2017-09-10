@@ -4,7 +4,6 @@ import headerActions from '../actions/headerActions';
 import HeaderMenu from '../components/HeaderMenu/HeaderMenu';
 
 function mapStateToProps(state) {
-    console.log(state);
     return {
         activeIndex: state.activeIndex
     };

@@ -1,7 +1,6 @@
 import React from 'react';
 
 import './headerMenu.scss';
-import '../MenuPart/MenuPart';
 import MenuPart from '../MenuPart/MenuPart';
 import menu, { loginMenu } from '../../constants/headerMenu';
 
@@ -19,7 +18,7 @@ const HeaderMenu = props => {
                                   index={content.index}
                                   title={content.title}
                                   icon={content.icon}
-                                  isActive={activeIndex}
+                                  stateIndex={activeIndex}
                                   onClickButton={activeButton}
                         />
                     )}
@@ -28,7 +27,7 @@ const HeaderMenu = props => {
                     <MenuPart index={loginMenu.index}
                               title={loginMenu.title}
                               icon={loginMenu.icon}
-                              isActive={activeIndex}
+                              stateIndex={activeIndex}
                               onClickButton={activeButton}
                     />
                 </ul>

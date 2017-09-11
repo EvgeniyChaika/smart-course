@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import headerActions from '../actions/headerActions';
+import { headerActions } from '../actions/index';
 import HeaderMenu from '../components/HeaderMenu/HeaderMenu';
 
 function mapStateToProps(state) {

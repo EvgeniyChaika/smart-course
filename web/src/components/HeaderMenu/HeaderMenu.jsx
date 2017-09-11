@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 import './headerMenu.scss';
 import MenuPart from '../MenuPart/MenuPart';
-import menu, { loginMenu } from '../../constants/headerMenu';
+import menu, { loginMenu, title } from '../../constants/headerMenu';
 
 const HeaderMenu = props => {
     const { activeIndex, activeButton } = props;
@@ -10,7 +11,7 @@ const HeaderMenu = props => {
         <nav className="navbar navbar-default">
             <div className="collapse navbar-collapse">
                 <div className="navbar-header">
-                    <span className="navbar-brand">Smart Course</span>
+                    <span className="navbar-brand header-title">{title}</span>
                 </div>
                 <ul className="nav navbar-nav">
                     {menu.map(content =>
@@ -34,6 +35,11 @@ const HeaderMenu = props => {
             </div>
         </nav>
     );
+};
+
+HeaderMenu.propTypes = {
+    activeIndex: PropTypes.number.isRequired,
+    activeButton: PropTypes.func.isRequired
 };
 
 export default HeaderMenu;

@@ -1,6 +1,8 @@
-export default function headerActions(index) {
+export const ACTIVE_BUTTON = 'ACTIVE_BUTTON';
+
+export function headerActions(index) {
     return {
-        type: 'ACTIVE_BUTTON',
+        type: ACTIVE_BUTTON,
         activeIndex: index
     };
 }

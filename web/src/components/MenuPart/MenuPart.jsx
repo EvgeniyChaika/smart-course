@@ -8,7 +8,7 @@ const MenuPart = props => {
     const isActive = stateIndex === index;
     return (
         <li className={isActive ? 'active' : ''} onClick={() => onClickButton(index)}>
-            <a href="#"><i className={`material-icons${isActive ? ' brown600' : ''}`}>{icon}</i>{title}</a>
+            <a href="#"><span className={`glyphicon glyphicon-${icon}${isActive ? ' active-icon' : ''}`}/>{title}</a>
         </li>
     );
 };

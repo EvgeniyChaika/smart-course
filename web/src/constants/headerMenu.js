@@ -9,13 +9,13 @@ const headerMenu = [
         index: 1,
         url: "/main/users",
         title: "Users",
-        icon: "face"
+        icon: "user"
     },
     {
         index: 2,
         url: "/main/statistics",
         title: "Statistics",
-        icon: "account_balance"
+        icon: "stats"
     }
 ];
 
@@ -25,5 +25,7 @@ export const loginMenu = {
     index: 3,
     url: "/login",
     title: "Login",
-    icon: "input"
+    icon: "log-in"
 };
+
+export const title = "Smart Course";

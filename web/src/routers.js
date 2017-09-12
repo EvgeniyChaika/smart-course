@@ -1,9 +1,11 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Redirect, Route } from 'react-router-dom';
+
 import App from './components/App/App';
 import Main from './components/Main/Main';
 import LoginForm from './components/LoginForm/LoginForm';
 
+//TODO
 export default function getRoutes(store) {
     const redirectIndex = (nextState, replace, sb) => {
         if (nextState.location.pathname === '/') {
@@ -12,11 +14,11 @@ export default function getRoutes(store) {
         sb();
     };
     return (
-        <Route path="/" component={App} onEnter={redirectIndex}>
-            <Route path="main">
-                <Route path="home" component={Main}/>
-            </Route>
-            <Route path="login" component={LoginForm}/>
-        </Route>
+        <div>
+            <Route path="/" component={App} onEnter={redirectIndex}/>
+            <Route path="/main/home" component={Main}/>
+            <Route path="/login" component={LoginForm}/>
+            <Redirect from="/" to="/main/home"/>
+        </div>
     );
 }

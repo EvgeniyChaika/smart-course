@@ -17,6 +17,7 @@ const HeaderMenu = props => {
                     {menu.map(content =>
                         <MenuPart key={content.index}
                                   index={content.index}
+                                  url={content.url}
                                   title={content.title}
                                   icon={content.icon}
                                   stateIndex={activeIndex}
@@ -26,6 +27,7 @@ const HeaderMenu = props => {
                 </ul>
                 <ul className="nav navbar-nav navbar-right">
                     <MenuPart index={loginMenu.index}
+                              url={loginMenu.url}
                               title={loginMenu.title}
                               icon={loginMenu.icon}
                               stateIndex={activeIndex}

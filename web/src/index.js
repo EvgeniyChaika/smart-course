@@ -1,8 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { Router } from 'react-router-dom';
-import createHashHistory from 'history/createHashHistory';
+import { hashHistory, Router } from 'react-router';
 
 import 'reset-css';
 import 'bootstrap-loader';
@@ -12,9 +11,9 @@ import getRoutes from './routers';
 
 import '../public/favicon/favicon.ico';
 
-const store = configureStore(createHashHistory());
+const store = configureStore(hashHistory);
 const routers = (
-    <Router history={createHashHistory()}>
+    <Router history={hashHistory}>
         {getRoutes(store)}
     </Router>);
 

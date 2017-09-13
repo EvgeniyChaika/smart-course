@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './menuPart.scss';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 
 const MenuPart = props => {
     const { stateIndex, title, index, icon, url, onClickButton } = props;

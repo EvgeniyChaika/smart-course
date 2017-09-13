@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './headerMenu.scss';
 import MenuPart from '../MenuPart/MenuPart';
-import menu, { loginMenu, title } from '../../constants/headerMenu';
+import menu, { loginMenu, title } from '../../data/headerMenu';
 
 const HeaderMenu = props => {
     const { activeIndex, activeButton } = props;

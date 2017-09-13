@@ -23,7 +23,7 @@ export default headerMenu;
 
 export const loginMenu = {
     index: 3,
-    url: "/login",
+    url: "/main/login",
     title: "Login",
     icon: "log-in"
 };

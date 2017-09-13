@@ -3,13 +3,13 @@ import './app.scss';
 
 import HeaderContainer from '../../containers/headerContainer';
 
-export default class App extends React.Component {
-
-    render() {
-        return (
-            <div>
-                <HeaderContainer/>
+export default function App({ children }) {
+    return (
+        <div>
+            <HeaderContainer/>
+            <div className="content">
+                {children}
             </div>
-        );
-    }
+        </div>
+    );
 }

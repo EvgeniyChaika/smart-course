@@ -5,7 +5,7 @@ import HeaderMenu from '../components/HeaderMenu/HeaderMenu';
 
 function mapStateToProps(state) {
     return {
-        activeIndex: state.activeIndex
+        activeIndex: state.headerReducer.activeIndex
     };
 }
 

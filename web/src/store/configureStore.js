@@ -1,8 +1,12 @@
-import { createStore } from 'redux';
+import { combineReducers, createStore } from 'redux';
 import headerReducer from '../reducers/headerReducer';
+import { routerReducer } from 'react-router-redux';
 
 export default function configureStore() {
     return createStore(
-        headerReducer
+        combineReducers({
+            headerReducer,
+            routing: routerReducer
+        })
     );
 }

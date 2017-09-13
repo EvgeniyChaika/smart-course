@@ -1,9 +1,13 @@
+import { fromJS } from 'immutable';
+
 import { ACTIVE_BUTTON } from '../actions/index';
 
-export default function headerReducer(state = { activeIndex: 0 }, action) {
+const initialState = fromJS({ activeIndex: 0 });
+
+export default function headerReducer(state = initialState, action) {
     switch (action.type) {
         case ACTIVE_BUTTON:
-            return Object.assign({}, state, { activeIndex: action.activeIndex });
+            return initialState.set('activeIndex', action.activeIndex);
         default:
             return state;
     }

@@ -6,6 +6,7 @@ export {
 export {
     CREATE_USER,
     CREATE_USER_FAIL,
+    LOGIN_USER,
     createUserAction,
     createUserFailAction,
     loginUserAction

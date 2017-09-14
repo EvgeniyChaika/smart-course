@@ -1,6 +1,6 @@
 import { fromJS } from 'immutable';
 
-import { CREATE_USER, CREATE_USER_FAIL } from '../../actions/index';
+import { CREATE_USER, CREATE_USER_FAIL, LOGIN_USER } from '../../actions/index';
 
 const initialState = fromJS({ user: {} });
 
@@ -16,3 +16,16 @@ export function createUserReducer(state = initialState, action) {
     }
 }
 
+const loginUser = {
+    isAuthenticated: false,
+    user: {}
+};
+
+export function loginUserReducer(state = fromJS({ loginUser }), action) {
+    switch (action.type) {
+        case LOGIN_USER:
+            return state.set('loginUser', action.loginUser);
+        default:
+            return state;
+    }
+}

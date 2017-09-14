@@ -1,8 +1,8 @@
 package com.course.controllers;
 
-import com.course.models.User;
 import com.course.services.UserService;
-import com.course.wrappers.request.NewUserWrapper;
+import com.course.wrappers.request.UserWrapper;
+import com.course.wrappers.response.LoginUserWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -23,10 +23,7 @@ public class UserController {
     }
 
     @RequestMapping(value = "/create/user")
-    public User createUser(@RequestBody NewUserWrapper user) {
-        User newUser = new User();
-        newUser.setLogin(user.getLogin());
-        newUser.setPassword(user.getPassword());
-        return userService.createUser(newUser);
+    public LoginUserWrapper createUser(@RequestBody UserWrapper user) {
+        return userService.createUser(user);
     }
 }

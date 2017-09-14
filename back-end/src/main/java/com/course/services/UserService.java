@@ -1,11 +1,13 @@
 package com.course.services;
 
-import com.course.models.User;
+import com.course.wrappers.request.UserWrapper;
+import com.course.wrappers.response.LoginUserWrapper;
 
 /**
  * Created on 14.09.17.
  */
+
 public interface UserService {
 
-    User createUser(User user);
+    LoginUserWrapper createUser(UserWrapper user);
 }

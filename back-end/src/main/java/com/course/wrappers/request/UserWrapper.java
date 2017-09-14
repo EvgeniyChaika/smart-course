@@ -3,7 +3,7 @@ package com.course.wrappers.request;
 /**
  * Created on 14.09.17.
  */
-public class NewUserWrapper {
+public class UserWrapper {
 
     private String login;
 
@@ -27,7 +27,7 @@ public class NewUserWrapper {
 
     @Override
     public String toString() {
-        return "NewUserWrapper{" +
+        return "UserWrapper{" +
                 "login='" + login + '\'' +
                 ", password='" + password + '\'' +
                 '}';

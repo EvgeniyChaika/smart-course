@@ -5,12 +5,12 @@ import { createUserFailAction, loginUserAction } from '../../actions/index';
 
 export function* createUserSaga(action) {
     try {
-        const user = yield Http.post('/course/create/user', {
+        const loginUser = yield Http.post('/course/create/user', {
             data: action.user,
             headers: { 'Content-Type': 'application/json' }
         });
-        //TODO
-        // yield put(loginUserAction(user));
+        console.log(loginUser);
+        yield put(loginUserAction(loginUser));
     } catch (e) {
         yield put(createUserFailAction(e));
     }

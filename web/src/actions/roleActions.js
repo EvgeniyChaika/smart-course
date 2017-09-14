@@ -18,9 +18,9 @@ export function createUserFailAction(error) {
     };
 }
 
-export function loginUserAction(user) {
+export function loginUserAction(loginUser) {
     return {
         type: LOGIN_USER,
-        user: fromJS(user)
+        loginUser: fromJS(loginUser)
     };
 }

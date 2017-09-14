@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import './headerMenu.scss';
 import MenuPart from '../MenuPart/MenuPart';
-import menu, { loginMenu, title } from '../../data/headerMenu';
+import { authenticationMenu, headerMenu, title } from '../../data/headerMenu';
 
 const HeaderMenu = props => {
     const { activeIndex, activeButton } = props;
@@ -14,7 +14,7 @@ const HeaderMenu = props => {
                     <span className="navbar-brand header-title">{title}</span>
                 </div>
                 <ul className="nav navbar-nav">
-                    {menu.map(content =>
+                    {headerMenu.map(content =>
                         <MenuPart key={content.index}
                                   index={content.index}
                                   url={content.url}
@@ -26,13 +26,16 @@ const HeaderMenu = props => {
                     )}
                 </ul>
                 <ul className="nav navbar-nav navbar-right">
-                    <MenuPart index={loginMenu.index}
-                              url={loginMenu.url}
-                              title={loginMenu.title}
-                              icon={loginMenu.icon}
-                              stateIndex={activeIndex}
-                              onClickButton={activeButton}
-                    />
+                    {authenticationMenu.map(content =>
+                        <MenuPart key={content.index}
+                                  index={content.index}
+                                  url={content.url}
+                                  title={content.title}
+                                  icon={content.icon}
+                                  stateIndex={activeIndex}
+                                  onClickButton={activeButton}
+                        />
+                    )}
                 </ul>
             </div>
         </nav>

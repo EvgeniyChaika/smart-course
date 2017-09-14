@@ -5,5 +5,8 @@ export {
 
 export {
     CREATE_USER,
-    roleActions
+    CREATE_USER_FAIL,
+    createUserAction,
+    createUserFailAction,
+    loginUserAction
 } from './roleActions';

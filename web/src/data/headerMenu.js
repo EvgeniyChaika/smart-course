@@ -1,4 +1,4 @@
-const headerMenu = [
+export const headerMenu = [
     {
         index: 0,
         url: "/main/home",
@@ -19,13 +19,19 @@ const headerMenu = [
     }
 ];
 
-export default headerMenu;
-
-export const loginMenu = {
-    index: 3,
-    url: "/main/login",
-    title: "Login",
-    icon: "log-in"
-};
+export const authenticationMenu = [
+    {
+        index: 3,
+        url: "/main/signup",
+        title: "Sign Up",
+        icon: "circle-arrow-right"
+    },
+    {
+        index: 4,
+        url: "/main/login",
+        title: "Login",
+        icon: "log-in"
+    }
+];
 
 export const title = "Smart Course";

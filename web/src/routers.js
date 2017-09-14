@@ -6,6 +6,7 @@ import Main from './components/Main/Main';
 import LoginForm from './components/LoginForm/LoginForm';
 import Statistics from './components/Statistics/Statistics';
 import Users from './components/Users/Users';
+import SignUpContainer from './containers/userContainer';
 
 export default function getRoutes(store) {
     const redirectIndex = (nextState, replace, sb) => {
@@ -19,6 +20,7 @@ export default function getRoutes(store) {
             <Route path="main/home" component={Main}/>
             <Route path="main/users" component={Users}/>
             <Route path="main/statistics" component={Statistics}/>
+            <Route path="/main/signup" component={SignUpContainer}/>
             <Route path="main/login" component={LoginForm}/>
         </Route>
     );

@@ -1,6 +1,6 @@
 import { fromJS } from 'immutable';
 
-import { ACTIVE_BUTTON } from '../actions/index';
+import { ACTIVE_BUTTON } from '../../actions/index';
 
 const initialState = fromJS({ activeIndex: 0 });
 

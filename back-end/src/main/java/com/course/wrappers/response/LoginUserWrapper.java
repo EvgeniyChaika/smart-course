@@ -8,16 +8,16 @@ import com.course.wrappers.request.UserWrapper;
 
 public class LoginUserWrapper {
 
-    private boolean isAuthenticated;
+    private boolean authenticated;
 
     private UserWrapper user;
 
     public boolean isAuthenticated() {
-        return isAuthenticated;
+        return authenticated;
     }
 
     public void setAuthenticated(boolean authenticated) {
-        isAuthenticated = authenticated;
+        this.authenticated = authenticated;
     }
 
     public UserWrapper getUser() {
@@ -31,7 +31,7 @@ public class LoginUserWrapper {
     @Override
     public String toString() {
         return "LoginUserWrapper{" +
-                "isAuthenticated=" + isAuthenticated +
+                "authenticated=" + authenticated +
                 ", user=" + user +
                 '}';
     }

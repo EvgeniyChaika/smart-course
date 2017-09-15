@@ -1,3 +1,5 @@
+export const title = "Smart Course";
+
 export const headerMenu = [
     {
         index: 0,
@@ -34,4 +36,9 @@ export const authenticationMenu = [
     }
 ];
 
-export const title = "Smart Course";
+export const logoutMenu = {
+    index: 5,
+    url: "/main/logout",
+    title: "Logout",
+    icon: "log-out"
+};

@@ -2,6 +2,7 @@ import { put } from 'redux-saga/effects';
 
 import Http from '../../httpClient';
 import { createUserFailAction, loginUserAction } from '../../actions/index';
+import { headerActions } from '../../actions/headerActions';
 
 export function* createUserSaga(action) {
     try {
@@ -11,6 +12,7 @@ export function* createUserSaga(action) {
         });
         console.log(loginUser);
         yield put(loginUserAction(loginUser));
+        yield put(headerActions(action.activeIndex));   //TODO
     } catch (e) {
         yield put(createUserFailAction(e));
     }

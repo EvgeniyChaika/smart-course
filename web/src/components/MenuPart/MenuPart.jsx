@@ -20,7 +20,7 @@ MenuPart.propTypes = {
     url: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
     icon: PropTypes.string.isRequired,
-    stateIndex: PropTypes.number.isRequired,
+    stateIndex: PropTypes.number,
     onClickButton: PropTypes.func.isRequired
 };
 

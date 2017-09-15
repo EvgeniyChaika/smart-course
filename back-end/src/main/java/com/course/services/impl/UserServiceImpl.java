@@ -35,7 +35,7 @@ public class UserServiceImpl implements UserService {
         LoginUserWrapper loginUserWrapper = new LoginUserWrapper();
         loginUserWrapper.setAuthenticated(true);
         loginUserWrapper.setUser(user);
-        LOG.info(loginUserWrapper.toString());
+        LOG.info("Login wrapper - {}", loginUserWrapper.toString());
         return loginUserWrapper;
     }
 }

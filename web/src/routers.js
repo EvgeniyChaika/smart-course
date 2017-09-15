@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route } from 'react-router';
+import { Redirect, Route } from 'react-router';
 
 import App from './components/App/App';
 import Main from './components/Main/Main';
@@ -20,8 +20,9 @@ export default function getRoutes(store) {
             <Route path="main/home" component={Main}/>
             <Route path="main/users" component={Users}/>
             <Route path="main/statistics" component={Statistics}/>
-            <Route path="/main/signup" component={SignUpContainer}/>
+            <Route path="main/signup" component={SignUpContainer}/>
             <Route path="main/login" component={LoginForm}/>
+            <Redirect from="main/logout" to="/main/home"/>
         </Route>
     );
 }

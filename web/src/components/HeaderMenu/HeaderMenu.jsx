@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import './headerMenu.scss';
 import MenuPart from '../MenuPart/MenuPart';
-import { authenticationMenu, headerMenu, title } from '../../data/headerMenu';
+import { authenticationMenu, headerMenu, logoutMenu, title } from '../../data/headerMenu';
 
 const HeaderMenu = props => {
-    const { activeIndex, activeButton } = props;
+    const { activeIndex, activeButton, isAuthenticated, logoutUser } = props;
     return (
         <nav className="navbar navbar-default">
             <div className="collapse navbar-collapse">
@@ -26,16 +26,24 @@ const HeaderMenu = props => {
                     )}
                 </ul>
                 <ul className="nav navbar-nav navbar-right">
-                    {authenticationMenu.map(content =>
-                        <MenuPart key={content.index}
-                                  index={content.index}
-                                  url={content.url}
-                                  title={content.title}
-                                  icon={content.icon}
-                                  stateIndex={activeIndex}
-                                  onClickButton={activeButton}
+                    {isAuthenticated ?
+                        <MenuPart index={logoutMenu.index}
+                                  url={logoutMenu.url}
+                                  title={logoutMenu.title}
+                                  icon={logoutMenu.icon}
+                                  onClickButton={logoutUser}
                         />
-                    )}
+                        :
+                        authenticationMenu.map(content =>
+                            <MenuPart key={content.index}
+                                      index={content.index}
+                                      url={content.url}
+                                      title={content.title}
+                                      icon={content.icon}
+                                      stateIndex={activeIndex}
+                                      onClickButton={activeButton}
+                            />
+                        )}
                 </ul>
             </div>
         </nav>
@@ -44,7 +52,9 @@ const HeaderMenu = props => {
 
 HeaderMenu.propTypes = {
     activeIndex: PropTypes.number.isRequired,
-    activeButton: PropTypes.func.isRequired
+    activeButton: PropTypes.func.isRequired,
+    isAuthenticated: PropTypes.bool.isRequired,
+    logoutUser: PropTypes.func.isRequired
 };
 
 export default HeaderMenu;

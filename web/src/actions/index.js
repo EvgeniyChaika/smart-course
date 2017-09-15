@@ -7,7 +7,9 @@ export {
     CREATE_USER,
     CREATE_USER_FAIL,
     LOGIN_USER,
+    LOGOUT_USER,
     createUserAction,
     createUserFailAction,
-    loginUserAction
+    loginUserAction,
+    logoutUserAction
 } from './roleActions';

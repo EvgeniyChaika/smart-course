@@ -7,7 +7,7 @@ const initialState = fromJS({ activeIndex: 0 });
 export default function headerReducer(state = initialState, action) {
     switch (action.type) {
         case ACTIVE_BUTTON:
-            return initialState.set('activeIndex', action.activeIndex);
+            return state.set('activeIndex', action.activeIndex);
         default:
             return state;
     }

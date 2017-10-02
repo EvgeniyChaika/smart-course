@@ -1,5 +1,6 @@
 package com.course.controllers;
 
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -9,5 +10,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class MainController {
 
-//  TODO
+    //  TODO
+    @RequestMapping("/course")
+    public String getCourse() {
+        return "Course";
+    }
 }

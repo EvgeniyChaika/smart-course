@@ -15,9 +15,9 @@ CREATE TABLE public.users
 	username VARCHAR(50) NOT NULL,
 	password VARCHAR(50) NOT NULL,
 	authorities VARCHAR(255) NOT NULL,
-	accountNonExpired BOOLEAN NOT NULL,
-	accountNonLocked BOOLEAN NOT NULL,
-	credentialsNonExpired BOOLEAN NOT NULL,
+	account_non_expired BOOLEAN NOT NULL,
+	account_non_locked BOOLEAN NOT NULL,
+	credentials_non_expired BOOLEAN NOT NULL,
 	enabled BOOLEAN NOT NULL
 );
 CREATE UNIQUE INDEX users_id_uindex ON public.users (id);

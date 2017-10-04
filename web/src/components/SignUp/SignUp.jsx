@@ -10,7 +10,7 @@ export default class SignUp extends React.Component {
         event.preventDefault();
         const { createUser } = this.props;
         const user = {
-            login: this.loginInput.value,
+            username: this.usernameInput.value,
             password: this.passwordInput.value
         };
         createUser(user);
@@ -26,14 +26,14 @@ export default class SignUp extends React.Component {
                                 <h2 className="text-center">Smart Course</h2>
                                 <form role="form" onSubmit={this.handleSubmit}>
                                     <div className="form-group">
-                                        <label htmlFor="exampleInputEmail1">Login :</label>
-                                        <input type="text" className="form-control" id="exampleInputEmail1"
-                                               ref={(input) => this.loginInput = input}
+                                        <label htmlFor="usernameInput">Login :</label>
+                                        <input type="text" className="form-control" id="usernameInput"
+                                               ref={(input) => this.usernameInput = input}
                                                placeholder="Login"/>
                                     </div>
                                     <div className="form-group">
-                                        <label htmlFor="exampleInputPassword1">Password :</label>
-                                        <input type="text" className="form-control" id="exampleInputPassword1"
+                                        <label htmlFor="passwordInput">Password :</label>
+                                        <input type="text" className="form-control" id="passwordInput"
                                                ref={(input) => this.passwordInput = input}
                                                placeholder="Password"/>
                                     </div>

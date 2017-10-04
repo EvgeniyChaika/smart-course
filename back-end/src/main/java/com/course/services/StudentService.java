@@ -7,7 +7,7 @@ import com.course.wrappers.response.LoginUserWrapper;
  * Created on 14.09.17.
  */
 
-public interface UserService {
+public interface StudentService {
 
     LoginUserWrapper createUser(UserWrapper user);
 }

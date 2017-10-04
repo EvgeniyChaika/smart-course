@@ -1,6 +1,6 @@
 package com.course.repositories;
 
-import com.course.models.User;
+import com.course.models.domain.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 /**

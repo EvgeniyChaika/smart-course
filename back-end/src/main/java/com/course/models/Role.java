@@ -1,43 +1,18 @@
 package com.course.models;
 
-import javax.persistence.*;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.stereotype.Component;
 
 /**
  * Created by evgeniy on 08.03.17.
  */
-
-@Entity
-@Table(name = "role")
-public class Role {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-
-    @Column(name = "description")
-    private String description;
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
-        this.id = id;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
+@Component
+public enum Role implements GrantedAuthority {
+    STUDENT,
+    ADMIN;
 
     @Override
-    public String toString() {
-        return "Role{" +
-                "id=" + id +
-                ", description='" + description + '\'' +
-                '}';
+    public String getAuthority() {
+        return name();
     }
 }

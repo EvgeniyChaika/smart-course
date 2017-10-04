@@ -9,7 +9,7 @@ import java.util.Base64;
  * Created on 9/27/17.
  */
 
-public class UserServiceImplTest {
+public class StudentServiceImplTest {
     @Before
     public void setUp() throws Exception {
     }

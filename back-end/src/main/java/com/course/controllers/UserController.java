@@ -1,6 +1,6 @@
 package com.course.controllers;
 
-import com.course.services.UserService;
+import com.course.services.StudentService;
 import com.course.wrappers.request.UserWrapper;
 import com.course.wrappers.response.LoginUserWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,15 +15,15 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class UserController {
 
-    private final UserService userService;
+    private final StudentService studentService;
 
     @Autowired
-    public UserController(UserService userService) {
-        this.userService = userService;
+    public UserController(StudentService studentService) {
+        this.studentService = studentService;
     }
 
     @RequestMapping(value = "/create/user")
     public LoginUserWrapper createUser(@RequestBody UserWrapper user) {
-        return userService.createUser(user);
+        return studentService.createUser(user);
     }
 }

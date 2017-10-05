@@ -1,4 +1,4 @@
-//package com.course.security;
+//package com.course.config.security;
 //
 //import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 //

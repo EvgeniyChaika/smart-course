@@ -1,7 +1,7 @@
 package com.course.services;
 
 import com.course.wrappers.request.UserWrapper;
-import com.course.wrappers.response.LoginUserWrapper;
+import org.springframework.security.core.userdetails.UserDetails;
 
 /**
  * Created on 14.09.17.
@@ -9,5 +9,5 @@ import com.course.wrappers.response.LoginUserWrapper;
 
 public interface StudentService {
 
-    LoginUserWrapper createUser(UserWrapper user);
+    UserDetails createUser(UserWrapper user);
 }

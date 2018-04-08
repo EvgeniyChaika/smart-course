@@ -1,14 +1,8 @@
 import React from 'react';
 
-export default class Main extends React.Component {
+const Main = () => (
+  <h1>Main</h1>
+);
 
-  constructor(props) {
-    super(props);
-  }
 
-  render() {
-    return (
-      <h1>Main</h1>
-    );
-  }
-}
+export default Main;

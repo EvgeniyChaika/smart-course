@@ -5,7 +5,7 @@ import { Router } from 'react-router';
 import createHashHistory from 'history/createHashHistory';
 
 import 'reset-css';
-import 'bootstrap-loader';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 import configureStore from './store/configureStore';
 import getRoutes from './routers';

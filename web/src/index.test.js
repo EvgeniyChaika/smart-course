@@ -1,5 +1,3 @@
-import { expect } from 'jest';
-
 function sum(a, b) {
   return a + b;
 }
@@ -7,5 +5,5 @@ function sum(a, b) {
 test('adds 1 + 2 to equal 3', () => {
   const sdsd = 3;
   expect(sum(1, sdsd))
-    .toBe(3);
+    .toBe(4);
 });

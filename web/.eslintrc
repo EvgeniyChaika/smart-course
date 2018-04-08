@@ -34,7 +34,7 @@
   "settings": {
     "import/parser": "babel-eslint",
     "import/resolve": {
-      "moduleDirectory": ["node_modules"]
+      "moduleDirectory": ["node_modules", "App"]
     }
   },
   "plugins": ["jest"]

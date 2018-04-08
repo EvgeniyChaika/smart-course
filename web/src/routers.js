@@ -4,7 +4,7 @@ import App from './components/App/App';
 import Main from './components/Main/Main';
 import LoginForm from './components/LoginForm/LoginForm';
 
-export default function getRoutes(store) {
+export default function getRoutes() {
   const redirectIndex = (nextState, replace, sb) => {
     if (nextState.location.pathname === '/') {
       replace('/main/home');

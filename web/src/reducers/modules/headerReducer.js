@@ -1,4 +1,4 @@
-import { ACTIVE_BUTTON } from '../actions/index';
+import { ACTIVE_BUTTON } from '../../actions/index';
 
 export default function headerReducer(state = { activeIndex: 0 }, action) {
   switch (action.type) {
